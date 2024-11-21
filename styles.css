@@ -1,0 +1,231 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #222;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: -1px 2px 33px 12px rgba(5,187,245,1);
+-webkit-box-shadow: -1px 2px 33px 12px rgba(5,187,245,1);
+-moz-box-shadow: -1px 2px 33px 12px rgba(5,187,245,1);
+    transition: background 0.3s, color 0.3s;
+    margin-top: 75px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+#darkModeToggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#darkModeToggle:hover {
+    color: #007bff;
+}
+
+/* Mode Toggle Buttons */
+.mode-toggle {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.mode-toggle button {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    background: #eee;
+    color: #555;
+    cursor: pointer;
+    border-radius: 8px 8px 0 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+.mode-toggle button.active {
+    background: #007bff;
+    color: #fff;
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Areas */
+.main {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+    color: #333;
+    background: #f9f9f9;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+textarea[readonly] {
+    background: #f1f1f1;
+}
+
+/* Buttons */
+.actions {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Info Card */
+.info-card {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    color: #333;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.info-card h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: #007bff;
+}
+
+.info-card p {
+    margin: 10px 0 0;
+    line-height: 1.6;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1e1e2f;
+    color: #eee;
+}
+
+body.dark-mode .container {
+    background: #2e2e3e;
+    color: #eee;
+}
+
+body.dark-mode textarea {
+    background: #444455;
+    color: #fff;
+    border-color: #555;
+}
+
+body.dark-mode textarea[readonly] {
+    background: #3b3b4e;
+}
+
+body.dark-mode button {
+    background: #4d4b4b;
+    color: #fff;
+}
+
+body.dark-mode button:hover {
+    background: #0056b3;
+}
+
+body.dark-mode .info-card {
+    background: #3b3b4e;
+    color: #ccc;
+    border-color: #555;
+}
+
+body.dark-mode #darkModeToggle {
+    color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      height: 90vh;
+    }
+    .container{
+        margin-top: 150px;
+        max-width: 350px;
+        padding: 20px;
+    }
+    textarea {
+        flex: 1;
+        padding: 5px;
+        font-size: 12px;
+        height: 100px;
+       resize: none;
+      
+    }
+
+    .actions {
+        display: flex;
+        justify-content: space-around;
+        gap: 3px;
+    }
+    
+    .button{
+        padding: 5px 5px;
+        font-size: 12px;
+    }
+    .info-card {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .info-card p {
+        margin: 5px 0 0;
+        line-height: 1.6;
+        font-size: 14px;
+    }
+  }

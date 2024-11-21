@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shap-her</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/logo.png" type="image/icon type">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Shap-her</h1>
+            <button id="darkModeToggle">
+                <span id="modeIcon">🌙</span>
+            </button>
+        </header>
+        <div class="mode-toggle">
+            <button id="encryptMode" class="active">Encrypt</button>
+            <button id="decryptMode">Decrypt</button>
+        </div>
+        <div class="main">
+            <textarea id="inputText" placeholder="Text"></textarea>
+            <textarea id="outputText" placeholder="Result" readonly></textarea>
+        </div>
+        <div class="actions">
+            <button id="actionButton">Encrypt</button>
+            <button id="resetButton">Reset</button>
+            <button id="copyButton">Copy</button>
+            <button id="voiceButton">🎤</button>
+        </div>
+        <div class="info-card">
+            <h2>About Shap-her</h2>
+            <p>
+                Shap-her is an innovative encryption tool that transforms text into symbolic representations.
+                Choose between Encrypter and Decrypter modes to encode or decode your text.
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
